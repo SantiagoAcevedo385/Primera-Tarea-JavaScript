@@ -2,3 +2,9 @@ div img{
     width: 485px;
     height: 350px;
   }
+
+@media(max-width:1280px){
+  div img{
+    width: 100%;
+  }
+}
