@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Metro JS</title>
+</head>
+<body>
+    
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand">Metro de Medellín</a>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
+        </div>
+      </nav>
+      <main>
+        <section>
+                <div class="container  border-top border-white " style="max-width: 500px" id="contenedor-formulario">
+                    <div class="text-center mb-4" id="titulo-formulario">
+                      <h2>Bienvenido al Metro de Medellín</h2>
+                      <p class="fs-5">Valor del tiquete: 3.500 COP</p>
+                    </div>
+                    <form   method="POST" data-netlify="true" action="#">     
+                          <div class= "mb-3">
+                            <p class="fs-5">Digite la cantidad de tiquetes que desee comprar: </p>           
+                            <input type="number" class="form-control" id="tickets" name="email" placeholder="Ejemplo: 2">
+                          </div>
+                        <div class="mb-3">
+                            <button type="submit" class=" btn btn-success w-100 fs-5" onclick="totalPago()">Aceptar</button>
+                        </div>
+                        <div class="imagen">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Logo_Metro_de_Medell%C3%ADn.svg/1274px-Logo_Metro_de_Medell%C3%ADn.svg.png" alt="">
+                        </div>
+                    </form>
+                </div>
+
+        </section>
+      </main>
+      <script>
+        function totalPago(){
+            let numeroTickets=document.getElementById("tickets").value;
+            const precio=3500;
+            let Total=precio*numeroTickets;
+            window.alert("Usted ha comprado un total de: "+numeroTickets+" tiquetes y su valor total es de: "+Total);
+    
+        }
+    
+    </script>
+</body>
+</html>
